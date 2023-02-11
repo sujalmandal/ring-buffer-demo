@@ -40,7 +40,8 @@ public class RingBufferExample {
         log.info("latch await finished()");
         service.shutdownNow();
         service.close();
-        log.info("total events : {}", temporalRingBuffer.getTotalEventsSeenInBuffer());
+        log.info("total events : {} seen in the last : {} seconds",
+                temporalRingBuffer.getTotalEventsSeenInBuffer(), totalTimeToKeepTrackOf);
         temporalRingBuffer.printStats();
     }
 

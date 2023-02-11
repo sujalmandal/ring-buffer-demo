@@ -24,6 +24,8 @@ public class RingBufferExample {
         int totalTasks = 10;
         int threadPoolSize = 3;
         int totalTimeToKeepTrackOf = 3;
+
+
         final CountDownLatch latch = new CountDownLatch(totalEvents);
         long startTime = System.currentTimeMillis();
         final Lock sharedLock = new ReentrantLock();
